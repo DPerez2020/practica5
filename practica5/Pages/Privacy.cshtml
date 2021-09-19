@@ -1,0 +1,33 @@
+﻿@page
+@model PrivacyModel
+@{
+}
+<h4>Ejercicio 2</h4>
+<p>
+    Los productos con precios mayores de 3,000 pesos pero menores de 5000 pesos, ordenados descendente mente
+</p>
+<table class="table">
+    <thead>
+        <tr class="row">
+            <th class="col-1">Id</th>
+            <th class="col-3">Nombre</th>
+            <th class="col-3">Categoria Id</th>
+            <th class="col-2">Marca</th>
+            <th class="col-2">Modelo</th>
+            <th class="col-1">Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.productos)
+        {
+            <tr class="row">
+                <td class="col-1">@item.Id</td>
+                <td class="col-3">@item.Nombre</td>
+                <td class="col-3">@item.CategoriaId</td>
+                <td class="col-2">@item.Marca</td>
+                <td class="col-2">@item.Modelo</td>
+                <td class="col-1">@item.Precio</td>
+            </tr>
+        }
+    </tbody>
+</table>

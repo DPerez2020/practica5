@@ -1,0 +1,24 @@
+﻿@page
+@model practica5.Pages.ejercicio3Model
+@{
+}
+<h4>Ejercicio 3</h4>
+<p>
+    Los nombres de las categorías de los productos registrados (usar join)
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.categorias) { 
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nombre</td>
+        </tr>
+        }
+    </tbody>
+</table>
